@@ -1,6 +1,5 @@
 const possibleChoices = ['rock', 'paper', 'scissors']
-const computerSelection = getComputerChoice()
-const playerSelection = getPlayerChoice()
+
 
 function playGame(){
 
@@ -39,24 +38,30 @@ function playGame(){
     }
 }
 
-
-
-
-function getComputerChoice(){
+function getComputerChoice()
+{
     computerSelection = possibleChoices[Math.floor(Math.random() * possibleChoices.length)]
     console.log("Computer Selection: ", computerSelection)
     return computerSelection;
-
-
-
 }
 
 
 function getPlayerChoice() {
-    playerSelection = prompt("Write one of these: Rock, Paper or Scissors").toLowerCase()
-    return playerSelection;
-    
+    const possibleChoices = ['rock', 'paper', 'scissors'];
+    while (true)
+    {
+        let playerSelection = prompt("Write one of these: Rock, Paper or Scissors").toLowerCase()
+        if (possibleChoices.includes(playerSelection)){
+            console.log(`You selected: ${playerSelection}`);
+            return playerSelection;
+        } else {
+            console.log("Invalid input, please try again");
+        }
+
+    }
+        
 }
+
 
 
 function playRound(playerSelection, computerSelection){
