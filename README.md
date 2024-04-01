@@ -1,4 +1,4 @@
 # rockpaperscissors
 Hallo leute! 
 
-Play rock, paper scissors in the console
+Play rock, paper scissors 
